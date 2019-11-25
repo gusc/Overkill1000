@@ -1,0 +1,12 @@
+Debug
+Release
+/3rd_party
+/.vs
+*.filters
+*.user
+*.sdf
+dll
+*.suo
+/ipch
+/sdk
+/lib
