@@ -1,0 +1,1 @@
+#define IDB_OSC_SCREEN 1001

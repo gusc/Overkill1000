@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0F10C8FE-1AB7-4248-B573-EF096A08897F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>OverkillEngine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>FL_DLL;WIN32;_DEBUG;_WINDOWS;_USRDLL;OVERKILLENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)include\;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(SolutionDir)lib\*.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <ResourceCompile>
+      <ShowProgress>true</ShowProgress>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>FL_DLL;WIN32;NDEBUG;_WINDOWS;_USRDLL;OVERKILLENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)include\;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(SolutionDir)lib\*.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="engine\buffers\audio_buffer.cpp" />
+    <ClCompile Include="engine\buffers\midi_buffer.cpp" />
+    <ClCompile Include="engine\buffers\ring_buffer.cpp" />
+    <ClCompile Include="engine\effects\delay.cpp" />
+    <ClCompile Include="engine\effects\effect.cpp" />
+    <ClCompile Include="engine\effects\filter.cpp" />
+    <ClCompile Include="engine\engine.cpp" />
+    <ClCompile Include="engine\engine_gen.cpp" />
+    <ClCompile Include="engine\envelopes\env.cpp" />
+    <ClCompile Include="engine\envelopes\env_dahdsr.cpp" />
+    <ClCompile Include="engine\iprocessor.cpp" />
+    <ClCompile Include="engine\igenerataor.cpp" />
+    <ClCompile Include="engine\oscilators\osc.cpp" />
+    <ClCompile Include="engine\oscilators\osc_gen.cpp" />
+    <ClCompile Include="engine\oscilators\osc_granular.cpp" />
+    <ClCompile Include="engine\oscilators\osc_sample.cpp" />
+    <ClCompile Include="engine\oscilators\osc_wtable.cpp" />
+    <ClCompile Include="ui\effects\ui_delay.cpp" />
+    <ClCompile Include="ui\effects\ui_effect.cpp" />
+    <ClCompile Include="ui\effects\ui_filter.cpp" />
+    <ClCompile Include="ui\oscilators\ui_osc.cpp" />
+    <ClCompile Include="ui\oscilators\ui_osc_gen.cpp" />
+    <ClCompile Include="ui\ui.cpp" />
+    <ClCompile Include="ui\ui_device.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="engine\buffers\audio_buffer.h" />
+    <ClInclude Include="engine\buffers\midi_buffer.h" />
+    <ClInclude Include="engine\buffers\ring_buffer.h" />
+    <ClInclude Include="engine\effects\delay.h" />
+    <ClInclude Include="engine\effects\effect.h" />
+    <ClInclude Include="engine\effects\filter.h" />
+    <ClInclude Include="engine\engine.h" />
+    <ClInclude Include="engine\envelopes\env.h" />
+    <ClInclude Include="engine\envelopes\env_dahdsr.h" />
+    <ClInclude Include="engine\iprocessor.h" />
+    <ClInclude Include="engine\igenerator.h" />
+    <ClInclude Include="engine\oscilators\osc.h" />
+    <ClInclude Include="engine\oscilators\osc_gen.h" />
+    <ClInclude Include="engine\oscilators\osc_granular.h" />
+    <ClInclude Include="engine\oscilators\osc_sample.h" />
+    <ClInclude Include="engine\oscilators\osc_wtable.h" />
+    <ClInclude Include="engine\types.h" />
+    <ClInclude Include="ui\effects\ui_delay.h" />
+    <ClInclude Include="ui\effects\ui_effect.h" />
+    <ClInclude Include="ui\effects\ui_filter.h" />
+    <ClInclude Include="ui\ui_device.h" />
+    <ClInclude Include="ui_resource.h" />
+    <ClInclude Include="ui\oscilators\ui_osc.h" />
+    <ClInclude Include="ui\oscilators\ui_osc_gen.h" />
+    <ClInclude Include="ui\ui.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ui.rc">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resource\MediumScreen.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

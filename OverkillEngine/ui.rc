@@ -1,0 +1,4 @@
+#include "ui_resource.h"
+#include "windows.h"
+
+IDB_OSC_SCREEN BITMAP "resource/MediumScreen.bmp"
