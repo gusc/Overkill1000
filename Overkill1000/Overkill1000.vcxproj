@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8E0D1D6E-3378-471B-AEB9-4E8D7AC50847}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Overkill1000</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;OVERKILL1000_EXPORTS;_CRT_SECURE_NO_DEPRECATE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)vstgui;$(ProjectDir)vstsdk2.4;$(ProjectDir)vstsdk2.4\pluginterfaces\vst2.x;$(ProjectDir)vstsdk2.4\public.sdk\source\vst2.x;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>vstsdk2.4\public.sdk\samples\vst2.x\win\vstplug.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;OVERKILL1000_EXPORTS;_CRT_SECURE_NO_DEPRECATE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)vstsdk2.4;$(ProjectDir)vstsdk2.4\pluginterfaces\vst2.x;$(ProjectDir)vstgui;$(ProjectDir)vstsdk2.4\public.sdk\source\vst2.x;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>vstsdk2.4\public.sdk\samples\vst2.x\win\vstplug.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="engine\engine.h" />
+    <ClInclude Include="engine\envelope\env.h" />
+    <ClInclude Include="engine\envelope\env_dahdsr.h" />
+    <ClInclude Include="engine\midi_engine.h" />
+    <ClInclude Include="engine\oscilators\osc.h" />
+    <ClInclude Include="engine\oscilators\osc_gen.h" />
+    <ClInclude Include="engine\oscilators\osc_granular.h" />
+    <ClInclude Include="engine\oscilators\osc_wtable.h" />
+    <ClInclude Include="engine\ring_buffer\ring_buffer.h" />
+    <ClInclude Include="overkillvst.h" />
+    <ClInclude Include="ui\ui_editor.h" />
+    <ClInclude Include="ui\ui_parameters.h" />
+    <ClInclude Include="vstgui\plugin-bindings\aeffguieditor.h" />
+    <ClInclude Include="vstsdk2.4\pluginterfaces\vst2.x\aeffect.h" />
+    <ClInclude Include="vstsdk2.4\pluginterfaces\vst2.x\aeffectx.h" />
+    <ClInclude Include="vstsdk2.4\pluginterfaces\vst2.x\vstfxstore.h" />
+    <ClInclude Include="vstsdk2.4\public.sdk\source\vst2.x\aeffeditor.h" />
+    <ClInclude Include="vstsdk2.4\public.sdk\source\vst2.x\audioeffect.h" />
+    <ClInclude Include="vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="engine\engine.cpp" />
+    <ClCompile Include="engine\engine_gen.cpp" />
+    <ClCompile Include="engine\envelope\env.cpp" />
+    <ClCompile Include="engine\envelope\env_dahdsr.cpp" />
+    <ClCompile Include="engine\midi_engine.cpp" />
+    <ClCompile Include="engine\oscilators\osc.cpp" />
+    <ClCompile Include="engine\oscilators\osc_gen.cpp" />
+    <ClCompile Include="engine\oscilators\osc_granular.cpp" />
+    <ClCompile Include="engine\oscilators\osc_wtable.cpp" />
+    <ClCompile Include="engine\ring_buffer\ring_buffer.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="overkillvst.cpp" />
+    <ClCompile Include="ui\ui_editor.cpp" />
+    <ClCompile Include="vstgui\plugin-bindings\aeffguieditor.cpp" />
+    <ClCompile Include="vstgui\vstgui_win32.cpp" />
+    <ClCompile Include="vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp" />
+    <ClCompile Include="vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp" />
+    <ClCompile Include="vstsdk2.4\public.sdk\source\vst2.x\vstplugmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="todo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ui\ui_resources.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

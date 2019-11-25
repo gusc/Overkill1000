@@ -1,0 +1,67 @@
+16 Oscilators:
+	Live audio input:
+		no modifiers - use live audio input and work with it
+	Sample player:
+		sample buffer
+		start offset
+		end offset
+		MIDI or fixed frequency
+		transpose (semitones, semi/100)
+	Generator:
+		waveform: sine, square, saw, noise
+		pulse width
+		offset
+		MIDI or fixed frequency
+		transpose (semitones, semi/100)
+	Wavetable:
+		wave buffer
+		offset
+		smear (x-fade)
+		MIDI or fixed frequency
+		transpose (semitones, semi/100)
+	Granular:
+		sample buffer
+		offset
+		width
+		smear (x-fade)
+		MIDI or fixed frequency
+		transpose (semitones, semi/100)
+	LFO:
+		waveform: sine, square, saw, noise
+		pulse width
+		offset
+		MIDI or fixed frequency
+
+Envelopes:
+	Start (level)
+	Delay (time)
+	A - attack (time)
+	Peak (level)
+	Hold (time)
+	D - decay (time)
+	S - sustain (level)
+	R - release (time)
+	End (level)
+
+Effects:
+	Delay (free or time based):
+		Time
+		Feedback
+		Dry/Wet
+	Reverb
+		Time
+		Feedback
+		Dry/Wet
+	Distortion
+		Character
+		Colour
+		Feedback
+		Dry/Wet
+	EQ
+		8 Band parametric
+	Compressor
+		Thershold
+		+ Some envelope
+	Gate
+		Thershold
+		+ Some envelope

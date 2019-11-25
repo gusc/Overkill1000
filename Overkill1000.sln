@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Overkill1000", "Overkill1000\Overkill1000.vcxproj", "{8E0D1D6E-3378-471B-AEB9-4E8D7AC50847}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F10C8FE-1AB7-4248-B573-EF096A08897F} = {0F10C8FE-1AB7-4248-B573-EF096A08897F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Overkill1000VST", "Overkill1000VST\Overkill1000VST.vcxproj", "{41043C34-5856-4FCD-B2F4-5360E47FE8D2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OverkillEngine", "OverkillEngine\OverkillEngine.vcxproj", "{0F10C8FE-1AB7-4248-B573-EF096A08897F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WTableEditor", "WTableEditor\WTableEditor.vcxproj", "{15B1D20E-5E9E-466D-81B6-C132295349BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E0D1D6E-3378-471B-AEB9-4E8D7AC50847}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8E0D1D6E-3378-471B-AEB9-4E8D7AC50847}.Debug|Win32.Build.0 = Debug|Win32
+		{8E0D1D6E-3378-471B-AEB9-4E8D7AC50847}.Release|Win32.ActiveCfg = Release|Win32
+		{8E0D1D6E-3378-471B-AEB9-4E8D7AC50847}.Release|Win32.Build.0 = Release|Win32
+		{41043C34-5856-4FCD-B2F4-5360E47FE8D2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{41043C34-5856-4FCD-B2F4-5360E47FE8D2}.Debug|Win32.Build.0 = Debug|Win32
+		{41043C34-5856-4FCD-B2F4-5360E47FE8D2}.Release|Win32.ActiveCfg = Release|Win32
+		{41043C34-5856-4FCD-B2F4-5360E47FE8D2}.Release|Win32.Build.0 = Release|Win32
+		{0F10C8FE-1AB7-4248-B573-EF096A08897F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0F10C8FE-1AB7-4248-B573-EF096A08897F}.Debug|Win32.Build.0 = Debug|Win32
+		{0F10C8FE-1AB7-4248-B573-EF096A08897F}.Release|Win32.ActiveCfg = Release|Win32
+		{0F10C8FE-1AB7-4248-B573-EF096A08897F}.Release|Win32.Build.0 = Release|Win32
+		{15B1D20E-5E9E-466D-81B6-C132295349BA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{15B1D20E-5E9E-466D-81B6-C132295349BA}.Debug|Win32.Build.0 = Debug|Win32
+		{15B1D20E-5E9E-466D-81B6-C132295349BA}.Release|Win32.ActiveCfg = Release|Win32
+		{15B1D20E-5E9E-466D-81B6-C132295349BA}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
