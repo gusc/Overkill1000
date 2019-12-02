@@ -10,3 +10,5 @@ dll
 /ipch
 /sdk
 /lib
+*.xcworkspace
+xcuserdata
